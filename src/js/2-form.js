@@ -45,11 +45,13 @@ const form = {
 
 const formState = JSON.parse(localStorage.getItem('feedback-form-state'));
 
-form.emailInput.value= formState.email;
-form.messageTextarea.value = formState.message;
+if (formState.email || formState.message) {
+    form.emailInput.value= formState.email;
+    form.messageTextarea.value = formState.message;
 
-formData.email = formState.email;
-formData.message = formState.message;
+    formData.email = formState.email;
+    formData.message = formState.message;
+}
 
 form.formItem.addEventListener('input', form.toLocalStorage);
 form.formItem.addEventListener('submit', form.formSubmit);
