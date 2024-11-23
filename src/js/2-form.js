@@ -51,6 +51,8 @@ if (formState) {
 
     formData.email = formState.email;
     formData.message = formState.message;
+} else {
+    localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 
 form.formItem.addEventListener('input', form.toLocalStorage);
