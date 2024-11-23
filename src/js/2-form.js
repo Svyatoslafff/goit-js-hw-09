@@ -45,7 +45,7 @@ const form = {
 
 const formState = JSON.parse(localStorage.getItem('feedback-form-state'));
 
-if (formState.email || formState.message) {
+if (formState) {
     form.emailInput.value= formState.email;
     form.messageTextarea.value = formState.message;
 
