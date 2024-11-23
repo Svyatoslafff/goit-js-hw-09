@@ -28,12 +28,44 @@ a{
   color: #000;
 }
 
+input, textarea {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #2e2f42;
+  transition: border-color 250ms ease-in-out;
+  outline: #808080;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+textarea{
+  resize: none;
+  height: 80px;
+}
+
+input:hover, textarea:hover {
+  border-color: #000;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #2e2f42;
+}
+
 .tasks{
   display: flex;
   gap: 8px;
 }
 
-.home-link, .task-link{
+.home-link, .task-link, button{
   border-radius: 8px;
   padding: 8px 16px;
   width: 95px;
@@ -44,10 +76,15 @@ a{
   justify-content: center;
   align-items: center;
   transition: background-color 250ms ease-in-out;
+  /* box-shadow:  2px 2px rgba(0, 0, 0, 20%) 10%; */
+  border: none;
 }
 
-.home-link:hover, .task-link:hover{
+.home-link:hover, .task-link:hover,
+.home-link:focus, .task-link:focus, 
+button:hover, button:focus{
   background-color: #6c8cff;
+  outline: none;
 }
 
 /* #region gallery */
@@ -63,7 +100,7 @@ a{
 /* lightbox */
 
 .sl-wrapper{
-  background-color: rgba(0, 0, 0, 70%);
+  background-color: rgba(0, 0, 0, 30%);
 }
 
 #body .sl-next, 
@@ -73,3 +110,31 @@ a{
   color: #fff;
 }
 /* #endregion gallery */
+
+
+
+/* #region form */
+
+
+
+.feedback-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.feedback-form>label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feedback-form>button {
+  margin-top: 16px;
+}
+
+/* #endregion form */
+
+
